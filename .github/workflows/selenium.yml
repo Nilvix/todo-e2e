@@ -25,12 +25,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # Ручная загрузка ChromeDriver из методички больше не нужна:
-      # setup-chrome ставит Chrome и подходящий к нему драйвер
-      - name: Set up Chrome
-        uses: browser-actions/setup-chrome@v1
-        with:
-          install-chromedriver: true
+      # Google Chrome уже установлен на ubuntu-latest.
+      # Драйвер под его версию скачивает Selenium Manager (selenium >= 4.6),
+      # поэтому отдельный шаг загрузки ChromeDriver не нужен
+      - name: Show Chrome version
+        run: google-chrome --version
 
       - name: Run Selenium tests
         run: pytest -v --html=report.html --self-contained-html
