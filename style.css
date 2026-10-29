@@ -1,0 +1,15 @@
+body { font-family: Arial, sans-serif; background: #eef2f7; margin: 0; }
+.app { max-width: 480px; margin: 40px auto; background: #fff; padding: 20px 24px;
+       border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,.1); }
+h1 { margin-top: 0; color: #2b4a77; }
+form { display: flex; gap: 8px; }
+#todo-input { flex: 1; padding: 8px; font-size: 15px; }
+button { padding: 6px 12px; cursor: pointer; }
+.error { color: #c0392b; margin: 6px 0 0; }
+.filters { margin: 14px 0 6px; display: flex; gap: 6px; }
+.filters .active { background: #2b4a77; color: #fff; }
+ul { list-style: none; padding: 0; }
+li { display: flex; align-items: center; gap: 8px; padding: 6px 0; border-bottom: 1px solid #eee; }
+li .text { flex: 1; }
+li.done .text { text-decoration: line-through; color: #999; }
+footer { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; }
